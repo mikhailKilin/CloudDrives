@@ -1,0 +1,19 @@
+{
+  "name": "CloudDrivers",
+  "description": "",
+  "main": "index.js",
+  "license": "BSD-2-Clause",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap-sass-official": "~3.3.3",
+    "fontawesome": "~4.3.0"
+  }
+}

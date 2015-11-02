@@ -1,0 +1,25 @@
+{
+  "name": "CloudDrivers",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "browser-sync": "^2.9.11",
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.0.0",
+    "vinyl-paths": "^2.0.0",
+    "gulp-typescript": "~2.9.2",
+    "gulp-concat": "^2.6.0"
+  },
+  "dependencies": {
+    "gulp-ruby-sass": "~2.0.5",
+    "gulp-bower": "0.0.10",
+    "gulp-notify": "^2.2.0"
+  }
+}
