@@ -1,16 +1,16 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
 var del	= require('del');
-var vinylPaths  = require('vinyl-paths');
-var typescript 	= require('gulp-typescript');
+var vinylPaths = require('vinyl-paths');
+var typescript = require('gulp-typescript');
 var gulpConcat = require('gulp-concat');
 var sass = require('gulp-ruby-sass');
 var notify = require("gulp-notify");
 var bower = require('gulp-bower');
 var config = {
-	sassPath:'./resources/sass',
-	bowerDir:'./bower_components'
-};
+    sassPath: './resources/sass',
+    bowerDir: './bower_components'
+}
 
 gulp.task('copyIndex', function()
 {
@@ -33,6 +33,12 @@ gulp.task('bower', function() {
      	   .pipe(gulp.dest(config.bowerDir))
 });
 
+gulp.task('icons', function() {
+    return gulp.src(config.bowerDir + '/fontawesome/fonts/**.*')
+        .pipe(gulp.dest('./public/fonts'));
+});
+
+
 gulp.task('css', function() {
     return gulp.src(config.sassPath + '/style.scss')
         .pipe(sass({
@@ -41,17 +47,12 @@ gulp.task('css', function() {
                 './resources/sass',
                 config.bowerDir + '/bootstrap-sass-official/assets/stylesheets',
                 config.bowerDir + '/fontawesome/scss',
-            ]
-        })
+          ]
+     })
             .on("error", notify.onError(function (error) {
-                return "Error: " + error.message;
-            })))
-        .pipe(gulp.dest('./public/css'));
-});
-
-gulp.task('icons', function() {
-    return gulp.src(config.bowerDir + '/fontawesome/fonts/**.*')
-        .pipe(gulp.dest('./public/fonts'));
+              return "Error: " + error.message;
+          })))
+      .pipe(gulp.dest('./public/css'));
 });
 
 gulp.task('watchFiles', function(){

@@ -18,7 +18,7 @@
     "gulp-concat": "^2.6.0"
   },
   "dependencies": {
-    "gulp-ruby-sass": "~2.0.5",
+    "gulp-ruby-sass": "^0.7.1",
     "gulp-bower": "0.0.10",
     "gulp-notify": "^2.2.0"
   }
